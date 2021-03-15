@@ -1,5 +1,5 @@
 html{height:100%;margin:0;padding:0}
-body{margin:0;font-family:"Consolas";height:100%}
+body{margin:0;font-family:"Consolas";height:100%;background-color: rgb(245, 245, 245)}
 
 a{text-decoration:none;color:#FF0F00}
 a:hover{text-decoration:underline}
@@ -8,11 +8,13 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 
 
 .wrapper{min-height:100%}
-.container{max-width:700px;margin:auto; border-style: dotted}
+.container{max-width:1080px;margin:auto;}
 
-.navbar{padding:50px 0 50px 0}
+.navbar{padding:20px 0 50px 0;text-align: center}
+.navbar-picture{height:150px;width:500px;margin:auto}
+.navbar-content{height: 150px;margin-left: 40px;margin: 20px}
 
-#author-name{font-size:30px;color:#272727;display:inline-block}
+#author-name{font-size:30px;color:#272727;display:inline-block;font-weight: bold}
 
 .navbar-ul{margin: 0 auto;padding:5px 0 5px 0; border-style: dotted;text-align: center;}
 .nav-list{list-style-type:none;margin:0 5px 0 10px}
@@ -28,8 +30,8 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 #navlist li.pull-left{float:none}
 #navlist li.nav-list{margin:0}}*/
 
-.container .profile-picture{height:150px;width:150px}
-.profile-content{margin-left: 170px;position: relative;}
+.container .profile-picture{height:150px;width:150px;margin-left: 150}
+.profile-content{margin-left: 350px;position: relative;display: block}
 /*p .container .profile-picture{padding:0;margin:0}*/
 /*.container img{text-align:center;width:100%}*/
 
