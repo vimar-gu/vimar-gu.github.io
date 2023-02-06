@@ -10,8 +10,8 @@
     <!-- <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link href="./css/index-mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 640px)">
-    <link href="./css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 640px)">
+    <link href="./css/index-mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 900px)">
+    <link href="./css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 900px)">
 
 </head>
 <body>
@@ -23,18 +23,24 @@
                         <img class="profile-picture alignable pull-right" src="./imgs/photo.jpg" />
                     </div>
                     <div class="navbar-content pull-left">
-                        <a id="author-name" class="alignable pull-left" href="">Jianyang Gu</a>
+                        <a id="author-name" class="alignable pull-left author-name" href="">Jianyang Gu</a>
                         <br>
-                        <p class="pull-left">Ph.D. Student @ Zhejiang University</p>
+                        <p class="pull-left"><b>4th-Year Ph.D. Student @ Zhejiang University</b></p>
                         <br>
-                        <a class="pull-left" href="mailto:gu_jianyang@zju.edu.cn">gu_jianyang@zju.edu.cn</a>
+                        <a class="pull-left">College of Control Science and Engineering</a>
                         <br>
-                        <p class="pull-left">(+86) 18867543859</p>
+                        <p class="pull-left">Email: gu_jianyang@zju.edu.cn</p>
                     </div>
                 </div>
 
                 <ul id="navlist" class="navbar-ul">
+                     <li class="alignable nav-list"><a href="mailto:gu_jianyang@zju.edu.cn">Mail</a>
+                     /
+                     </li>
                      <li class="alignable nav-list"><a href="https://github.com/vimar-gu">Github</a>
+                     /
+                     </li>
+                     <li class="alignable nav-list"><a href="https://scholar.google.com/citations?user=8ZXbT18AAAAJ&hl=en">Google Scholar</a>
                      /
                      </li>
                      <li class="alignable nav-list"><a href="./vitae.pdf">Vitae</a>
@@ -49,145 +55,145 @@
             <div class="container main">
                 <h2>About Me</h2>
                 <p>
-                    I'm currently a Ph.D. student at 
+                    I'm currently a 4th-year Ph.D. student at 
                     <a href="http://cse.zju.edu.cn">College of Control Science and Engineering</a>, 
                     <a href="http://www.zju.edu.cn">Zhejiang University</a>, Hangzhou, China. 
                     I'm supervised by 
                     <a href="https://person.zju.edu.cn/jiangwei">Prof. Wei Jiang</a>.
-                    I received my Bachelor's degree in Zhejiang University in 2019.
-                    My current research interests include unsupervised domain adaptation, image retrieval and person re-identification.
+                    Previously, I received my B.Eng. degree in Zhejiang University in 2019.
+                    During Sep. 2022 - Nov. 2023, I am a visiting scholar at <a href="https://ai.comp.nus.edu.sg/">HPC AI Lab</a>,
+                    <a href="https://www.nus.edu.sg/">National University of Singapore</a>,
+                    under the supervision of <a href="https://www.comp.nus.edu.sg/~youy/">Prof. Yang You</a>.
                 </p>
-                <div id="experiences">
-                    <h2>Experiences</h2>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/oppo.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">OPPO Research Intern</p>
-                            <p>Focused on the domain generalizable person re-identification and video action recognition.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/alibaba.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">Alibaba Research Intern</p>
-                            <p>Focused on the unsupervised domain adaptive person re-identification.
-                            Awarded as the annual outstanding research intern in 2020.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/yitu.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">Yitu Tech. CI Intern</p>
-                            <p>Helped build up the continuous integration pipeline of products in
-                                <a href="https://www.yitutech.com/cn">Yitu Tech</a>.
-                                The code can be examined and tested before deploying online in an automated manner. </p>
-                        </div>
-                    </div>
+                <div id="interests">
+                    <h2>Research Interests</h2>
+                    <ul>
+                        <li>Dataset Distillation</li>
+                        <li>Object Re-Identification</li>
+                        <li>Unsupervised Domain Adaptation</li>
+                        <li>Deep Learning</li>
+                        <li>Computer Vision</li>
+                    </ul>
                 </div>
-                <div id="projects">
-                    <h2>Projects</h2>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/met.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">Multi-view Evolutionary Training for Unsupervised Domain Adpative Re-ID</p>
-                            <p>Reduced the clustering noise from the snapshot quality and temporal consistency. 
-                                By reducing the noise we achieve a robust and effective training process. </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/naic.jpg">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">NAIC 2020 AI Challenge --- Person Re-identification Track Second Prize</p>
-                            <p>Introduced channel shuffle operations for multi-modal scenario. 
-                                Further improved the robustness and performance of the model with unsupervised training methods. </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/visda.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">Visual Domain Adaptation Challenge 2020 in ECCV Workshop --- Champion</p>
-                            <p>Solved the inter-domain bias and the intra-domain bias brought by camera differences with generative networks,
-                            clustering-based training pipeline and post-processing methods. </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/angular.png">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">Angular Triplet Loss for Vehicle Re-identification</p>
-                            <p>Uniformed the metric space for triplet loss and cross entropy loss. 
-                            Designed an effective baseline with only global feature employed.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-frame">
-                            <img class="card-picture" src="./imgs/ssl.jpg">
-                        </div>
-                        <div class="card-content">
-                            <p class="card-title">Robocup 2018 Montreal --- Small Size League Champion</p>
-                            <p><a href="https://ssl.robocup.org/">Robocup</a> is a robot soccer match. 
-                                In small size league, two groups of robots compete to score goals just like humans. 
-                                I was in charge of robot motion control in the team. </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="publications">
+                <div id="publications" class="publications">
                     <h2>Publications</h2>
-                    <ol>
+                    <ul>
                         <li>
-                            <p><b><u>Jianyang Gu</u></b>, Weihua Chen, Hao Luo, Fan Wang, Hao Li, Wei Jiang, and Weijie Mao. Multi-View Evolutionary Training for Unsupervised Domain Adaptive Person Re-Identification. <i>IEEE TIFS</i>, 17, 344-356, (2022).</p>
-                            <p><a href="https://ieeexplore.ieee.org/abstract/document/9672094/">[PDF]</a></p>
+                            <p class="paper-head">Multi-View Evolutionary Training for Unsupervised Domain Adaptive Person Re-Identification.</p>
+                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Weihua Chen, Hao Luo, Fan Wang, Hao Li, Wei Jiang, and Weijie Mao.</p>
+                            <p class="paper-content"><i>IEEE TIFS</i>, 17, 344-356, (2022). <a href="https://ieeexplore.ieee.org/abstract/document/9672094/">[PDF]</a></p>
                         </li>
                         <li>
-                            <p><b><u>Jianyang Gu</u></b>, Hao Luo, Weihua Chen, Yiqi Jiang, Yuqi Zhang, Shuting He, Fan Wang, Hao Li, and Wei Jiang. 1st Place Solution to VisDA-2020: Bias Elimination for Domain Adaptive Pedestrian Re-identification. <i>ArXiv</i>, 2012.13498.</p>
-                            <p><a href="https://arxiv.org/pdf/2012.13498">[PDF]</a> <a href="https://github.com/vimar-gu/Bias-Eliminate-DA-ReID">[Code]</a></p>
+                            <p class="paper-head">An efficient global representation constrained by Angular Triplet loss for vehicle re-identification.</p>
+                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Weihua Chen, Hao Luo, Fan Wang, Hao Li, Wei Jiang, and Weijie Mao.</p>
+                            <p class="paper-content"><i>Pattern Anal Applic</i> 24, 367–379 (2021). <a href="https://link.springer.com/article/10.1007/s10044-020-00900-w">[PDF]</a></p>
                         </li>
                         <li>
-                            <p><b><u>Jianyang Gu</u></b>, Wei Jiang, Hao Luo, and Hongyan Yu. An efficient global representation constrained by Angular Triplet loss for vehicle re-identification. <i>Pattern Anal Applic</i> 24, 367–379 (2021).</p>
-                            <p><a href="https://link.springer.com/article/10.1007/s10044-020-00900-w">[PDF]</a></p>
+                            <p class="paper-head">1st Place Solution to VisDA-2020: Bias Elimination for Domain Adaptive Pedestrian Re-identification.</p>
+                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Hao Luo, Weihua Chen, Yiqi Jiang, Yuqi Zhang, Shuting He, Fan Wang, Hao Li, and Wei Jiang.</p>
+                            <p class="paper-content"><i>ArXiv</i>, 2012.13498 (2020). <a href="https://arxiv.org/pdf/2012.13498">[PDF]</a> <a href="https://github.com/vimar-gu/Bias-Eliminate-DA-ReID">[Code]</a></p>
                         </li>
                         <li>
-                            <p>Wei Li*, Shimin Chen*, <b><u>Jianyang Gu*</u></b>, Ning Wang, Chen Chen, and Yandong Guo. MV-TAL: Mulit-view temporal action localization in naturalistic driving. <i>CVPR Workshop</i>, 3242-3248 (2022)</p>
-                            <p><a href="https://openaccess.thecvf.com/content/CVPR2022W/AICity/papers/Li_MV-TAL_Mulit-View_Temporal_Action_Localization_in_Naturalistic_Driving_CVPRW_2022_paper.pdf">[PDF]</a></p>
+                            <p class="paper-head">Transformer-Based Domain-Specific Representation for Unsupervised Domain Adaptive Vehicle Re-Identification.</p>
+                            <p class="paper-content">Ran Wei, <b><u>Jianyang Gu</u></b>, Shuting He, and Wei Jiang</p>
+                            <p class="paper-content"><i>IEEE TITS</i> (2022). <a href="https://ieeexplore.ieee.org/abstract/document/9967437">[PDF]</a></p>
                         </li>
                         <li>
-                            <p>Xiao Pan, Hao Luo, Wei Jiang, Jianming Zhang, <b><u>Jianyang Gu</u></b>, and Peike Li. SFGN: Representing the sequence with one super frame for video person re-identification. <i>KnoSys</i>, 249, 108884 (2022).</p>
-                            <p><a href="https://www.sciencedirect.com/science/article/pii/S095070512200421X">[PDF]</a></p>
+                            <p class="paper-head">3D-Guided Frontal Face Generation for Pose-Invariant Recognition.</p>
+                            <p class="paper-content">Hao Wu, <b><u>Jianyang Gu</u></b>, Xiaojin Fan, He Li, Lidong Xie, and Jian Zhao.</p>
+                            <p class="paper-content"><i>ACM TIST</i> (2022). <a href="https://dl.acm.org/doi/abs/10.1145/3572035">[PDF]</a></p>
                         </li>
                         <li>
-                            <p>Haonan Xie, Hao Luo, <b><u>Jianyang Gu</u></b>, and Wei Jiang. Unsupervised Domain Adaptive Person Re-Identification via Intermediate Domains. <i>Appl Sci</i>, 12 (14), 6990 (2022).</p>
-                            <p><a href="https://www.mdpi.com/2076-3417/12/14/6990/pdf">[PDF]</a></p>
+                            <p class="paper-head">MV-TAL: Mulit-view temporal action localization in naturalistic driving.</p>
+                            <p class="paper-content">Wei Li*, Shimin Chen*, <b><u>Jianyang Gu*</u></b>, Ning Wang, Chen Chen, and Yandong Guo.</p>
+                            <p class="paper-content"><i>CVPR Workshop</i>, 3242-3248 (2022). <a href="https://openaccess.thecvf.com/content/CVPR2022W/AICity/papers/Li_MV-TAL_Mulit-View_Temporal_Action_Localization_in_Naturalistic_Driving_CVPRW_2022_paper.pdf">[PDF]</a></p>
                         </li>
                         <li>
-                            <p>Xiao Pan, Hao Luo, Weihua Chen, Fan Wang, Hao Li, Wei Jiang, Jianming Zhang, <b><u>Jianyang Gu</u></b>, and Peike Li. Dynamic Gradient Reactivation for Backward Compatible Person Re-identification. <i>Arxiv</i>, 2207.05658.</p>
-                            <p><a href="https://arxiv.org/pdf/2207.05658">[PDF]</a></p>
+                            <p class="paper-head">SEAL: A Large-scale Video Dataset of Multi-grained Spatio-temporally Action Localization.</p>
+                            <p class="paper-content">Shimin Chen, Wei Li, Chen Chen, <b><u>Jianyang Gu</u></b>, Jiaming Chu, Xunqiang Tao, and Yandong Guo.</p>
+                            <p class="paper-content"><i>ArXiv</i>, 2204.02688 (2022). <a href="https://arxiv.org/pdf/2204.02688">[PDF]</a></p>
                         </li>
                         <li>
-                            <p>Shimin Chen, Wei Li, Chen Chen, <b><u>Jianyang Gu</u></b>, Jiaming Chu, Xunqiang Tao, and Yandong Guo. SEAL: A Large-scale Video Dataset of Multi-grained Spatio-temporally Action Localization. <i>ArXiv</i>, 2204.02688.</p>
-                            <p><a href="https://arxiv.org/pdf/2204.02688">[PDF]</a></p>
+                            <p class="paper-head">SFGN: Representing the sequence with one super frame for video person re-identification.</p>
+                            <p class="paper-content">Xiao Pan, Hao Luo, Wei Jiang, Jianming Zhang, <b><u>Jianyang Gu</u></b>, and Peike Li.</p>
+                            <p class="paper-content"><i>KnoSys</i>, 249, 108884 (2022). <a href="https://www.sciencedirect.com/science/article/pii/S095070512200421X">[PDF]</a></p>
                         </li>
                         <li>
-                            <p>Hao Luo, Weihua Chen, Xianzhe Xu, <b><u>Jianyang Gu</u></b>, Yuqi Zhang, Chong Liu, Yiqi Jiang, Shuting He, Fan Wang, and Hao Li. An empirical study of vehicle re-identification on the AI City Challenge. <i>CVPR Workshop</i>, 4095-4102 (2021)</p>
-                            <p><a href="https://openaccess.thecvf.com/content/CVPR2021W/AICity/papers/Luo_An_Empirical_Study_of_Vehicle_Re-Identification_on_the_AI_City_CVPRW_2021_paper.pdf">[PDF]</a></p>
+                            <p class="paper-head">Unsupervised Domain Adaptive Person Re-Identification via Intermediate Domains.</p>
+                            <p class="paper-content">Haonan Xie, Hao Luo, <b><u>Jianyang Gu</u></b>, and Wei Jiang.</p>
+                            <p class="paper-content"><i>Appl Sci</i>, 12 (14), 6990 (2022). <a href="https://www.mdpi.com/2076-3417/12/14/6990/pdf">[PDF]</a></p>
                         </li>
                         <li>
-                            <p>Hao Luo, Wei Jiang, Youzhi Gu, Fuxu Liu, Xingyu Liao, Shenqi Lai and <b><u>Jianyang Gu</u></b>. A strong baseline and batch normalization neck for deep person re-identification. <i>IEEE TMM</i>, 22(10), 2597-2609 (2019).</p>
-                            <p><a href="https://ieeexplore.ieee.org/abstract/document/8930088">[PDF]</a></p>
+                            <p class="paper-head">Dynamic Gradient Reactivation for Backward Compatible Person Re-identification.</p>
+                            <p class="paper-content">Xiao Pan, Hao Luo, Weihua Chen, Fan Wang, Hao Li, Wei Jiang, Jianming Zhang, <b><u>Jianyang Gu</u></b>, and Peike Li.</p>
+                            <p class="paper-content"><i>Arxiv</i>, 2207.05658 (2022). <a href="https://arxiv.org/pdf/2207.05658">[PDF]</a></p>
+                        </li>
+                        <li>
+                            <p class="paper-head">An empirical study of vehicle re-identification on the AI City Challenge.</p>
+                            <p class="paper-content">Hao Luo, Weihua Chen, Xianzhe Xu, <b><u>Jianyang Gu</u></b>, Yuqi Zhang, Chong Liu, Yiqi Jiang, Shuting He, Fan Wang, and Hao Li.</p>
+                            <p class="paper-content"><i>CVPR Workshop</i>, 4095-4102 (2021). <a href="https://openaccess.thecvf.com/content/CVPR2021W/AICity/papers/Luo_An_Empirical_Study_of_Vehicle_Re-Identification_on_the_AI_City_CVPRW_2021_paper.pdf">[PDF]</a></p>
+                        </li>
+                        <li>
+                            <p class="paper-head">A strong baseline and batch normalization neck for deep person re-identification.</p>
+                            <p class="paper-content">Hao Luo, Wei Jiang, Youzhi Gu, Fuxu Liu, Xingyu Liao, Shenqi Lai and <b><u>Jianyang Gu</u></b>.</p>
+                            <p class="paper-content"><i>IEEE TMM</i>, 22(10), 2597-2609 (2019). <a href="https://ieeexplore.ieee.org/abstract/document/8930088">[PDF]</a></p>
                         </li>
                     </ol>
+                </div>
+                <div id="experiences">
+                    <h2>Experiences</h2>
+                    <ul>
+                        <li>
+                            <p class="exp-head">OPPO Research Intern</p>
+                            <p class="exp-content"><i>Nov. 2021 - Jun. 2022. </i>Focused on domain generalizable person re-identification and video action recognition.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">Alibaba Research Intern</p>
+                            <p class="exp-content"><i>Jun. 2020 - Apr. 2021. </i>Focused on unsupervised domain adaptive person re-identification.
+                            Awarded as the annual outstanding research intern in 2020.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">Yitu Tech. CI Intern</p>
+                            <p class="exp-content"><i>May. 2018 - Sept. 2018. </i>Helped build up the continuous integration pipeline of products.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="awards">
+                    <h2>Competitions & Awards</h2>
+                    <ul>
+                        <li>
+                            <p class="exp-head">ActivityNet Temporal Action Localization Challenge</p>
+                            <p class="exp-content"><i>Third Place. </i>CVPR Workshop 2022.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">SoccerNet Challenge</p>
+                            <p class="exp-content"><i>Third Place. </i>CVPR Workshop 2022.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">AICity Challenge</p>
+                            <p class="exp-content"><i>First Place. </i>CVPR Workshop 2021.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">National AI Challenge</p>
+                            <p class="exp-content"><i>Second Prize. </i>2020.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">Visual Domain Adaptation Challenge</p>
+                            <p class="exp-content"><i>First Place. </i>ECCV Workshop 2020.</p>
+                        </li>
+                        <li>
+                            <p class="exp-head">Robocup Montreal</p>
+                            <p class="exp-content"><i>First Place. </i>2018.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="service">
+                    <h2>Academic Service</h2>
+                    <ul>
+                        <li>
+                            <p>Conference Reviewer: CVPR, ECCV</p>
+                        </li>
+                    </ul>
                 </div>
                 <div id="other-info">
                     <h2>Other Information</h2>
