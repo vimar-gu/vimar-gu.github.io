@@ -13,8 +13,38 @@
     <link href="./css/index-mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 900px)">
     <link href="./css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 900px)">
 
+    <script type="text/javascript">
+        window.onload = function () {
+            var totop = document.getElementById("totop-button")
+            totop.style.display="none";
+
+            totop.onclick = function () {
+                window.scrollTo({
+                    top: 0, behavior: "smooth"
+                })
+            }
+
+            var pageHeight = 500;
+            window.onscroll = function() {
+                var backTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (backTop > pageHeight) {
+                    totop.style.display="block";
+                } else {
+                    totop.style.display="none";
+                }
+            }
+        }
+    </script>
+
 </head>
 <body>
+
+    <div class="float-button">
+        <button id="totop-button">
+            &#9757
+        </button>
+    </div>
+
     <div class="wrapper">
         <div id="index-banner">
             <div id="index-banner-glass">
@@ -82,11 +112,6 @@
                             <p class="paper-head">Summarizing Stream Data for Memory-Restricted Online Continual Learning.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Kai Wang, Wei Jiang, and Yang You.</p>
                             <p class="paper-content"><i>Arxiv</i>, 2305.16645, (2023). <a href="https://arxiv.org/pdf/2305.16645">[PDF]</a> <a href="https://github.com/vimar-gu/SSD">[Code]</a></p>
-                        </li>
-                        <li>
-                            <p class="paper-head">InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning.</p>
-                            <p class="paper-content">Ziheng Qin*, Kai Wang*, Zangwei Zheng, <b><u>Jianyang Gu</u></b>, Xiangyu Peng, Daquan Zhou, and Yang You.</p>
-                            <p class="paper-content"><i>ArXiv</i>, 2303.04947 (2023). <a href="https://arxiv.org/pdf/2303.04947">[PDF]</a> <a href="https://github.com/henryqin1997/InfoBatch">[Code]</a></p>
                         </li>
                         <li>
                             <p class="paper-head">DiM: Distilling Dataset into Generative Model.</p>
