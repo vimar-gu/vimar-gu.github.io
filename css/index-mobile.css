@@ -6,11 +6,15 @@ a:hover{text-decoration:underline}
 
 hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(255,255,255,0.3)}
 
+.wrapper{border-radius: 25px;min-height:99%;width:90%;margin-left:5%;margin-top:25%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22);
+    background-color: #fafafa;
+}
 
-.wrapper{min-height:99%;width:90%;margin-left:5%;margin-top:2%;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22)}
-
-#index-banner{background-size: auto 100%; background-position: center center}
-#index-banner-glass{padding: 50px 0 30px 0; background-color: rgb(245, 245, 245);text-align: center}
+#index-banner{background-position: center center}
+#index-banner-glass{border-radius: 25px;padding: 50px 0 30px 0; background-color: #eeeeee;text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
 
 .container{margin:auto}
 
@@ -44,7 +48,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 /*.container img{text-align:center;width:100%}*/
 
 
-.content{width: 90%; margin: auto}
+.content{width: 90%; margin: auto; margin-top: 50px;}
 .main{margin-left: 20px}
 
 
