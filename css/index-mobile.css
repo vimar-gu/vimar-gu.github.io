@@ -63,7 +63,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 .exp-head{margin:3px 0 3px 0;font-weight:bold;}
 .exp-content{margin:1px 0 1px 0}
 
-.year-block{font-family:"Helvetica";font-weight:bold;color:#cccccc;font-size:30px}
+.year-block{font-weight:bold;color:#888888;font-size:20px}
 
 .float-button{display: "none"}
 
