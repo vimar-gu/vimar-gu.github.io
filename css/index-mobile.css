@@ -8,8 +8,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 
 .wrapper{border-radius: 25px;min-height:99%;width:90%;margin-left:5%;margin-top:25%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22);
-    background-color: #fafafa;
-}
+    background-color: #fafafa;}
 
 #index-banner{background-position: center center}
 #index-banner-glass{border-radius: 25px;padding: 50px 0 30px 0; background-color: #eeeeee;text-align: center;
@@ -53,13 +52,12 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 
 
 /*#projects{width: 100%}*/
-.card{box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22); display: flex;width: 100%;margin: 0 0 10px 0}
-.card:hover{box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22)}
-
-.card-frame{height: 100px; display: inline-block; width: 100px; margin:10px;}
-.card-picture{height: 100px; width: 100px}
-.card-content{display: block; margin: 0px 30px 0 30px;padding: 0 0 20px 0}
-.card-title{margin: 10px 0 0 0; font-weight: bold}
+.card{border-radius: 15px; display: inline-block;}
+.card:hover{box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.1); background-color: #dddddd;}
+.card-frame{text-align: center; margin-top: 10px;}
+.card-content{margin: 10px;}
+.card-picture{width: 300px; max-width: 60%;}
+.card-title{margin: 0 0 0 0; font-weight: bold; display: inline-block;}
 
 .paper-head{margin:3px 0 3px 0;font-weight:bold;}
 .paper-content{margin:1px 0 1px 0}
@@ -67,7 +65,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 .exp-head{margin:3px 0 3px 0;font-weight:bold;}
 .exp-content{margin:1px 0 1px 0}
 
-.year-block{font-weight:bold;color:#888888;font-size:20px}
+.year-block{font-weight:bold;color:#888888;font-size:20px; margin-bottom: 10px;}
 
 .float-button{display: "none"}
 
