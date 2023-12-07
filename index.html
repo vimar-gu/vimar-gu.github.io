@@ -128,9 +128,14 @@
                             <img class="card-picture alignable" src="./imgs/pubs/minimaxdiffusion.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable">[arXiv] Efficient Dataset Distillation via Minimax Diffusion</p>
+                            <p class="card-title alignable">[arXiv] Efficient Dataset Distillation via Minimax Diffusion
+                            <a class="paper-url href="https://arxiv.org/pdf/2311.15529">[PDF]</a>
+                            <a class="paper-url href="https://github.com/vimar-gu/MinimaxDiffusion">[Code]</a></p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Saeed Vahidian, Vyacheslav Kungurtsev, Haonan Wang, Wei Jiang, Yang You and Yiran Chen.</p>
-                            <p class="paper-content"><a href="https://arxiv.org/pdf/2311.15529">[PDF]</a> <a href="https://github.com/vimar-gu/MinimaxDiffusion">[Code]</a></p>
+                            <ul class="paper-description">
+                                <li>Minimax Diffusion only requires 1 hour to finish the distillation for a 10-class subset of full-sized ImageNet.</li>
+                                <li>Minimax Diffusion generates representative and diverse images, yielding state-of-the-art validation performance.</li>
+                            </ul>
                         </div>
                     </div>
                     <hr>
@@ -139,60 +144,127 @@
                             <img class="card-picture alignable" src="./imgs/pubs/ssd.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable">[arXiv] Summarizing Stream Data for Memory-Restricted Online Continual Learning</p>
+                            <p class="card-title alignable">[arXiv] Summarizing Stream Data for Memory-Restricted Online Continual Learning
+                            <a class="paper-url href="https://arxiv.org/pdf/2305.16645">[PDF]</a>
+                            <a class="paper-url href="https://github.com/vimar-gu/SSD">[Code]</a></p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Kai Wang, Wei Jiang, and Yang You.</p>
-                            <p class="paper-content"><a href="https://arxiv.org/pdf/2305.16645">[PDF]</a> <a href="https://github.com/vimar-gu/SSD">[Code]</a></p>
+                            <ul class="paper-description">
+                                <li>SSD summarizes the informtion flow in online continual learning into informative samples.</li>
+                                <li>SSD significantly improves the replay effects, especially for circumstances with restricted memory.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card">
+                        <div class="card-frame frame-pull-left">
+                            <img class="card-picture alignable" src="./imgs/pubs/dq.png" />
+                        </div>
+                        <div class="card-content pull-left">
+                            <p class="card-title alignable">[ICCV 2023] Dataset Quantization
+                            <a class="paper-url href="https://arxiv.org/abs/2308.10524">[PDF]</a>
+                            <a class="paper-url href="https://github.com/magic-research/Dataset_Quantization">[Code]</a></p>
+                            <p class="paper-content">Daquan Zhou*, Kai Wang*, <b><u>Jianyang Gu*</u></b>, Dongze Lian, Xiangyu Peng, Yifan Zhang, Yang You, and Jiashi Feng.</p>
+                            <ul class="paper-description">
+                                <li>DQ targets at compressing large-scale datasets into subsets with lossless validation performance.</li>
+                                <li>DQ only requires 60% ImageNet and 20% Alpaca's instruction tuning data to achieve lossless training.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card">
+                        <div class="card-frame frame-pull-left">
+                            <img class="card-picture alignable" src="./imgs/pubs/dream.png" />
+                        </div>
+                        <div class="card-content pull-left">
+                            <p class="card-title alignable">[ICCV 2023] DREAM: Efficient Dataset Distillation by Representative Matching
+                            <a class="paper-url href="https://arxiv.org/pdf/2302.14416">[PDF]</a>
+                            <a class="paper-url href="https://github.com/lyq312318224/DREAM">[Code]</a></p>
+                            <p class="paper-content">Yanqing Liu*, <b><u>Jianyang Gu*</u></b>, Kai Wang, Zheng Zhu, Wei Jiang, and Yang You.</p>
+                            <ul class="paper-description">
+                                <li>DREAM aims to improve the training efficiency by only calculating matching metrics with representative samples.</li>
+                                <li>DREAM only requires less than 20% of original iterations to achieve baseline performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card">
+                        <div class="card-frame frame-pull-left">
+                            <img class="card-picture alignable" src="./imgs/pubs/dim.png" />
+                        </div>
+                        <div class="card-content pull-left">
+                            <p class="card-title alignable">[arXiv] DiM: Distilling Dataset into Generative Model
+                            <a class="paper-url href="https://arxiv.org/pdf/2303.04707">[PDF]</a>
+                            <a class="paper-url href="https://github.com/vimar-gu/DiM">[Code]</a></p>
+                            <p class="paper-content">Kai Wang*, <b><u>Jianyang Gu*</u></b>, Daquan Zhou, Zheng Zhu, Wei Jiang, and Yang You.</p>
+                            <ul class="paper-description">
+                                <li>DiM opens up a new generative scheme for dataset distillation by condensing the information into models.</li>
+                                <li>DiM generates diverse images on the fly, providing outstanding distillation performance with small extra training consumption.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='year-block'>Unsupervised Object Re-identification System</div>
+                    <div class="card">
+                        <div class="card-frame frame-pull-left">
+                            <img class="card-picture alignable" src="./imgs/pubs/colorprompt.png" />
+                        </div>
+                        <div class="card-content pull-left">
+                            <p class="card-title alignable">[arXiv] Color Prompting for Data-Free Continual Unsupervised Domain Adaptive Person Re-Identification
+                            <a class="paper-url href="https://arxiv.org/abs/2308.10716">[PDF]</a>
+                            <a class="paper-url href="https://github.com/vimar-gu/ColorPromptReID">[Code]</a></p>
+                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Hao Luo, Kai Wang, Wei Jiang, Yang You, and Jian Zhao.</p>
+                            <ul class="paper-description">
+                                <li>CoP learns the color distribution conditioned on the tasks and image contents during the continual learning process.</li>
+                                <li>CoP provides substantial improvements on anti-forgetting and generalization without storing images of previous tasks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card">
+                        <div class="card-frame frame-pull-left">
+                            <img class="card-picture alignable" src="./imgs/pubs/msinet.png" />
+                        </div>
+                        <div class="card-content pull-left">
+                            <p class="card-title alignable">[CVPR 2023] MSINet: Twins Contrastive Search of Multi-Scale Interaction for Object ReID
+                            <a class="paper-url" href="https://arxiv.org/pdf/2303.07065">[PDF]</a>
+                            <a class="paper-url" href="https://github.com/vimar-gu/MSINet">[Code]</a></p>
+                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Kai Wang, Hao Luo, Chen Chen, Wei Jiang, Yuqiang Fang, Shanghang Zhang, Yang You, and Jian Zhao.</p>
+                            <ul class="paper-description">
+                                <li>MSINet searches the optimal interation between multi-scale branches with a twins contrastive mechanism.</li>
+                                <li>MSINet yeilds better performance on both supervised and unsupervised tasks with limited parameter size.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card">
+                        <div class="card-frame frame-pull-left">
+                            <img class="card-picture alignable" src="./imgs/pubs/met.png" />
+                        </div>
+                        <div class="card-content pull-left">
+                            <p class="card-title alignable">[IEEE TIFS] Multi-View Evolutionary Training for Unsupervised Domain Adaptive Person Re-Identification
+                            <a class="paper-url" href="https://ieeexplore.ieee.org/abstract/document/9672094/">[PDF]</a></p>
+                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Weihua Chen, Hao Luo, Fan Wang, Hao Li, Wei Jiang, and Weijie Mao.</p>
+                            <ul class="paper-description">
+                                <li>MET effectively reduces the clustering noise from the dimensions of snapshot quality and temporal consistency.</li>
+                                <li>MET significantly improves the training robustness by high-quality clustering results, leading to better model performance.</li>
+                            </ul>
                         </div>
                     </div>
                     <hr>
                     <ul>
                         <li>
-                            <p class="paper-head">DREAM: Efficient Dataset Distillation by Representative Matching.</p>
-                            <p class="paper-content">Yanqing Liu*, <b><u>Jianyang Gu*</u></b>, Kai Wang, Zheng Zhu, Wei Jiang, and Yang You.</p>
-                            <p class="paper-content"><i>ICCV</i> (2023). <a href="https://arxiv.org/pdf/2302.14416">[PDF]</a> <a href="https://github.com/lyq312318224/DREAM">[Code]</a></p>
-                        </li>
-                        <li>
-                            <p class="paper-head">Dataset Quantization.</p>
-                            <p class="paper-content">Daquan Zhou*, Kai Wang*, <b><u>Jianyang Gu*</u></b>, Dongze Lian, Xiangyu Peng, Yifan Zhang, Yang You, and Jiashi Feng.</p>
-                            <p class="paper-content"><i>ICCV</i> (2023). <a href="https://arxiv.org/abs/2308.10524">[PDF]</a> <a href="https://github.com/magic-research/Dataset_Quantization">[Code]</a></p>
-                        </li>
-                        <li>
-                            <p class="paper-head">DiM: Distilling Dataset into Generative Model.</p>
-                            <p class="paper-content">Kai Wang*, <b><u>Jianyang Gu*</u></b>, Daquan Zhou, Zheng Zhu, Wei Jiang, and Yang You.</p>
-                            <p class="paper-content"><i>ArXiv</i>, 2303.04707 (2023). <a href="https://arxiv.org/pdf/2303.04707">[PDF]</a> <a href="https://github.com/vimar-gu/DiM">[Code]</a></p>
-                        </li>
-                    </ul>
-                    <div class='year-block'>Unsupervised Object Re-identification System</div>
-                    <ul>
-                        <li>
-                            <p class="paper-head">Color Prompting for Data-Free Continual Unsupervised Domain Adaptive Person Re-Identification.</p>
-                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Hao Luo, Kai Wang, Wei Jiang, Yang You, and Jian Zhao.</p>
-                            <p class="paper-content"><i>Arxiv</i>, 2308.10716, (2023). <a href="https://arxiv.org/abs/2308.10716">[PDF]</a> <a href="https://github.com/vimar-gu/ColorPromptReID">[Code]</a></p>
-                        </li>
-                        <li>
-                            <p class="paper-head">MSINet: Twins Contrastive Search of Multi-Scale Interaction for Object ReID.</p>
-                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Kai Wang, Hao Luo, Chen Chen, Wei Jiang, Yuqiang Fang, Shanghang Zhang, Yang You, and Jian Zhao.</p>
-                            <p class="paper-content"><i>CVPR</i>, 19243-19253, (2023). <a href="https://arxiv.org/pdf/2303.07065">[PDF]</a> <a href="https://github.com/vimar-gu/MSINet">[Code]</a></p>
-                        </li>
-                        <li>
-                            <p class="paper-head">Multi-View Evolutionary Training for Unsupervised Domain Adaptive Person Re-Identification.</p>
-                            <p class="paper-content"><b><u>Jianyang Gu</u></b>, Weihua Chen, Hao Luo, Fan Wang, Hao Li, Wei Jiang, and Weijie Mao.</p>
-                            <p class="paper-content"><i>IEEE TIFS</i>, 17, 344-356, (2022). <a href="https://ieeexplore.ieee.org/abstract/document/9672094/">[PDF]</a></p>
-                        </li>
-                        <li>
-                            <p class="paper-head">Transformer-Based Domain-Specific Representation for Unsupervised Domain Adaptive Vehicle Re-Identification.</p>
+                            <p class="paper-head">[IEEE TITS] Transformer-Based Domain-Specific Representation for Unsupervised Domain Adaptive Vehicle Re-Identification.
+                            <a class="paper-url" href="https://ieeexplore.ieee.org/abstract/document/9967437">[PDF]</a></p>
                             <p class="paper-content">Ran Wei, <b><u>Jianyang Gu</u></b>, Shuting He, and Wei Jiang</p>
-                            <p class="paper-content"><i>IEEE TITS</i>, 24(3), 2935-2946, (2022). <a href="https://ieeexplore.ieee.org/abstract/document/9967437">[PDF]</a></p>
                         </li>
                         <li>
-                            <p class="paper-head">An efficient global representation constrained by Angular Triplet loss for vehicle re-identification.</p>
+                            <p class="paper-head">[Pattern Anal Applic] An efficient global representation constrained by Angular Triplet loss for vehicle re-identification.
+                            <a class="paper-url" href="https://link.springer.com/article/10.1007/s10044-020-00900-w">[PDF]</a></p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Wei Jiang, Hao Luo, and Hongyan Yu.</p>
-                            <p class="paper-content"><i>Pattern Anal Applic</i> 24, 367–379 (2021). <a href="https://link.springer.com/article/10.1007/s10044-020-00900-w">[PDF]</a></p>
                         </li>
                         <li>
-                            <p class="paper-head">1st Place Solution to VisDA-2020: Bias Elimination for Domain Adaptive Pedestrian Re-identification.</p>
+                            <p class="paper-head">[ECCVW 2020] 1st Place Solution to VisDA-2020: Bias Elimination for Domain Adaptive Pedestrian Re-identification.
+                            <a class="paper-url" href="https://arxiv.org/pdf/2012.13498">[PDF]</a> <a class="paper-url" href="https://github.com/vimar-gu/Bias-Eliminate-DA-ReID">[Code]</a></p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Hao Luo, Weihua Chen, Yiqi Jiang, Yuqi Zhang, Shuting He, Fan Wang, Hao Li, and Wei Jiang.</p>
-                            <p class="paper-content"><i>ArXiv</i>, 2012.13498 (2020) (<i>ECCV Workshop</i>). <a href="https://arxiv.org/pdf/2012.13498">[PDF]</a> <a href="https://github.com/vimar-gu/Bias-Eliminate-DA-ReID">[Code]</a></p>
                         </li>
                     </ol>
                 </div>
