@@ -45,6 +45,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 /*p .container .profile-picture{padding:0;margin:0}*/
 /*.container img{text-align:center;width:100%}*/
 
+.visitor{display: none;}
 
 .content{width: 90%; margin: auto; margin-top: 50px;}
 .main{margin-left: 20px}
