@@ -19,7 +19,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 
 .navbar{padding:0;display: inline-block}
 .author-name{padding:0;font-weight:bold;display: inline-block}
-.navbar-frame{height:150px;width:180px;margin-left:27.5%;margin-bottom:5%}
+.navbar-frame{height:150px;width:180px;margin-left:20%;margin-bottom:5%}
 .navbar-content{height: 150px;margin-left:5%}
 
 #author-name{font-size:30px;color:#272727;display:inline-block;font-weight: bold}
@@ -47,7 +47,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 /*.container img{text-align:center;width:100%}*/
 
 
-.content{width: 90%; margin: 50px 5% 0 5%; margin-top: 50px;}
+.content{width: 90%; margin: 50px 6% 0 6%; margin-top: 50px;}
 /* .main{margin-left: 1%} */
 
 
@@ -56,7 +56,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 .card:hover{box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.1); background-color: #dddddd;}
 .card-frame{text-align: center; margin-top: 10px;}
 .card-content{margin: 10px;}
-.card-picture{width: 300px; max-width: 60%;}
+.card-picture{width: 300px; max-width: 60%; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);}
 .card-title{margin: 0 0 0 0; font-weight: bold; display: inline-block;}
 
 .paper-head{margin:3px 0 3px 0;font-weight:bold;}

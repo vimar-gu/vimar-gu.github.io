@@ -6,7 +6,7 @@ a:hover{text-decoration:underline}
 
 hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(255,255,255,0.3)}
 
-.wrapper{border-radius: 25px;min-height:99%;width:70%;margin-left:15%;margin-top:15%;
+.wrapper{border-radius: 25px;min-height:99%;width:60%;margin-left:20%;margin-top:15%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22);
     background-color: #fafafa;}
 
@@ -48,15 +48,15 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px soli
 .visitor{display: none;}
 
 .content{width: 90%; margin: auto; margin-top: 50px;}
-.main{margin-left: 20px}
+.main{margin-left: 20px; margin-right: 20px}
 
 
 /*#projects{width: 100%}*/
-.card{border-radius: 15px; padding:0; display: inline-block;}
-.card-frame{width:32%; text-align: center; margin: 2% 0 2% 1%;}
-.card-content{margin: 2%; width: 63%}
+.card{border-radius: 15px; padding:0; display: inline-block}
+.card-frame{width:28%; text-align: center; margin: 2% 0 2% 1%;}
+.card-content{margin: 2%; width: 65%}
 .card:hover{box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.1); background-color: #dddddd}
-.card-picture{max-width: 95%;}
+.card-picture{max-width: 95%; border-radius: 12px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);}
 .card-title{margin: 0 0 0 0; font-weight: bold; display: inline-block;}
 
 .paper-head{margin:3px 0 3px 0;font-weight:bold;}
