@@ -12,7 +12,7 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="./css/index-mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)">
     <link href="./css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1000px)">
 
@@ -70,7 +70,7 @@
                 for (var i = 0; i < authorItems.length; i++) {
                     var item = authorItems[i];
                     var fullText = item.textContent.trim();
-                    if (fullText.length < 160) {
+                    if (fullText.length < 80) {
                         continue;
                     }
                     var fullHtml = item.innerHTML;
@@ -83,26 +83,30 @@
                             "<b><u>Jianyang Gu</u></b>"
                         );
                     }
-                    item.dataset.preview = previewHtml;
-                    item.dataset.full = fullHtml;
-                    item.innerHTML = previewHtml;
+                    var authorText = document.createElement("span");
+                    authorText.className = "author-text";
+                    authorText.dataset.preview = previewHtml;
+                    authorText.dataset.full = fullHtml;
+                    authorText.innerHTML = previewHtml;
+                    item.innerHTML = "";
+                    item.appendChild(authorText);
                     item.classList.add("has-preview");
                     item.classList.add("is-collapsed");
                     var btn = document.createElement("button");
                     btn.type = "button";
                     btn.className = "author-toggle";
                     btn.textContent = "Show more";
-                    btn.onclick = function (target) {
+                    btn.onclick = function (target, textEl) {
                         return function () {
                             var expanded = target.classList.toggle("is-expanded");
                             target.classList.toggle("is-collapsed", !expanded);
                             if (target.classList.contains("has-preview")) {
-                                target.innerHTML = expanded ? target.dataset.full : target.dataset.preview;
+                                textEl.innerHTML = expanded ? textEl.dataset.full : textEl.dataset.preview;
                             }
                             this.textContent = expanded ? "Show less" : "Show more";
                         };
-                    }(item);
-                    item.parentNode.insertBefore(btn, item.nextSibling);
+                    }(item, authorText);
+                    item.appendChild(btn);
                 }
             }
     </script>
@@ -190,12 +194,14 @@
                             <img class="card-picture alignable" src="./imgs/pubs/biocap.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">arXiv</span> <a class="paper-url" href="https://arxiv.org/pdf/2510.20095">PDF</a>
-                            <a class="paper-url" href="https://github.com/Imageomics/biocap">Code</a>
-                            <a class="paper-url" href="https://imageomics.github.io/biocap/">Webpage</a></span>
-                            <span class="paper-title">BioCAP: Exploiting Synthetic Captions Beyond Labels in Biological Foundation Models</span></p>
+                            <p class="card-title alignable"><span class="paper-title">BioCAP: Exploiting Synthetic Captions Beyond Labels in Biological Foundation Models</span></p>
                             <p class="paper-description">Integrate instance-level synthetic captions in multimodal alignment and demonstrate rich understanding of biological semantics.</p>
                             <p class="paper-content" data-keep-last="Jianyang Gu">Ziheng Zhang, Xinyue Ma, Arpita Chowdhury, Elizabeth G Campolongo, Matthew J Thompson, Net Zhang, Samuel Stevens, Hilmar Lapp, Tanya Berger-Wolf, Yu Su, Wei-Lun Chao, and <b><u>Jianyang Gu</u></b>.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">arXiv</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2510.20095">PDF</a>
+                            <a class="paper-url" href="https://github.com/Imageomics/biocap">Code</a>
+                            <a class="paper-url" href="https://imageomics.github.io/biocap/">Webpage</a></span>
                         </div>
                     </div>
                     <hr>
@@ -204,12 +210,14 @@
                             <img class="card-picture alignable" src="./imgs/pubs/bioclip.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge spotlight">NeurIPS 2025 Spotlight</span> <a class="paper-url" href="https://arxiv.org/pdf/2505.23883">PDF</a>
-                            <a class="paper-url" href="https://github.com/Imageomics/bioclip-2">Code</a>
-                            <a class="paper-url" href="https://imageomics.github.io/bioclip-2/">Webpage</a></span>
-                            <span class="paper-title">BioCLIP 2: Emergent Properties from Scaling Hierarchical Contrastive Learning</span></p>
+                            <p class="card-title alignable"><span class="paper-title">BioCLIP 2: Emergent Properties from Scaling Hierarchical Contrastive Learning</span></p>
                             <p class="paper-description">Extend species classification training to emergent properties of inter-species ecological alignment and intra-species variation separation.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Samuel Stevens, Elizabeth G Campolongo, Matthew J Thompson, Net Zhang, Jiaman Wu, Andrei Kopanev, Zheda Mai, Alexander E White, James Balhoff, Wasila Dahdul, Daniel Rubenstein, Hilmar Lapp, Tanya Berger-Wolf, Wei-Lun Chao, and Yu Su.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge spotlight">NeurIPS 2025 Spotlight</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2505.23883">PDF</a>
+                            <a class="paper-url" href="https://github.com/Imageomics/bioclip-2">Code</a>
+                            <a class="paper-url" href="https://imageomics.github.io/bioclip-2/">Webpage</a></span>
                         </div>
                     </div>
                     <hr>
@@ -218,28 +226,35 @@
                             <img class="card-picture alignable" src="./imgs/pubs/finercam.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">CVPR 2025</span> <a class="paper-url" href="https://arxiv.org/pdf/2501.11309">PDF</a>
-                            <a class="paper-url" href="https://github.com/Imageomics/Finer-CAM">Code</a>
-                            <a class="paper-url" href="https://colab.research.google.com/drive/1plLrL7vszVD5r71RGX3YOEXEBmITkT90?usp=sharing">Demo</a></span>
-                            <span class="paper-title">Finer-CAM: Spotting the Difference Reveals Finer Details for Visual Explanation</span></p>
+                            <p class="card-title alignable"><span class="paper-title">Finer-CAM: Spotting the Difference Reveals Finer Details for Visual Explanation</span></p>
                             <p class="paper-description">Compare the target class with similar classes for more fine-grained and discriminative explanation.</p>
                             <p class="paper-content">Ziheng Zhang*, <b><u>Jianyang Gu*</u></b>, Arpita Chowdhury, Zheda Mai, David Carlyn, Tanya Berger-Wolf, Yu Su, and Wei-Lun Chao.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">CVPR 2025</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2501.11309">PDF</a>
+                            <a class="paper-url" href="https://github.com/Imageomics/Finer-CAM">Code</a>
+                            <a class="paper-url" href="https://colab.research.google.com/drive/1plLrL7vszVD5r71RGX3YOEXEBmITkT90?usp=sharing">Demo</a></span>
                         </div>
                     </div>
                     <hr>
-                    <ul>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">CVPR 2025</span> <a class="paper-url" href="https://arxiv.org/pdf/2501.09333">PDF</a>
-                            <a class="paper-url" href="https://github.com/Imageomics/Prompt_CAM">Code</a></span>
-                            <span class="paper-title">Prompt-CAM: Making Vision Transformers Interpretable for Fine-Grained Analysis.</span></p>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">Prompt-CAM: Making Vision Transformers Interpretable for Fine-Grained Analysis.</span></p>
                             <p class="paper-content">Arpita Chowdhury, Dipanjyoti Paul, Zheda Mai, <b><u>Jianyang Gu</u></b>, Ziheng Zhang, Kazi Sajeed Mehrab, Elizabeth G Campolongo, Daniel Rubenstein, Charles V Stewart, Anuj Karpatne, Tanya Berger-Wolf, Yu Su, and Wei-Lun Chao.</p>
-                        </li>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge oral">CVPR CV4Animals Workshop Oral</span> <a class="paper-url" href="https://arxiv.org/pdf/2501.06749">PDF</a>
-                            <a class="paper-url" href="https://github.com/Imageomics/SST">Code</a></span>
-                            <span class="paper-title">Static Segmentation by Tracking: A Frustratingly Label-Efficient Approach to Fine-Grained Segmentation.</span></p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">CVPR 2025</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2501.09333">PDF</a>
+                            <a class="paper-url" href="https://github.com/Imageomics/Prompt_CAM">Code</a></span>
+                        </div>
+                    <hr>
+
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">Static Segmentation by Tracking: A Frustratingly Label-Efficient Approach to Fine-Grained Segmentation.</span></p>
                             <p class="paper-content">Zhenyang Feng, Zihe Wang, <b><u>Jianyang Gu</u></b>, Saul Ibaven Bueno, Tomasz Frelek, Advikaa Ramesh, Jingyan Bai, Lemeng Wang, Zanming Huang, Jinsu Yoo, Tai-Yu Pan, Arpita Chowdhury, Michelle Ramirez, Elizabeth G. Campolongo, Matthew J. Thompson, Christopher G. Lawrence, Sydne Record, Neil Rosser, Anuj Karpatne, Daniel Rubenstein, Hilmar Lapp, Charles V. Stewart, Tanya Berger-Wolf, Yu Su, and Wei-Lun Chao.</p>
-                        </li>
+                            
+                            <span class="paper-meta"><span class="paper-badge oral">CVPR CV4Animals Workshop Oral</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2501.06749">PDF</a>
+                            <a class="paper-url" href="https://github.com/Imageomics/SST">Code</a></span>
+                        </div>
                     </ul>
                     <div class='year-block'>Data-centric Efficient Training</div>
                     <div class="card">
@@ -247,11 +262,13 @@
                             <img class="card-picture alignable" src="./imgs/pubs/minimaxdiffusion.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">CVPR 2024</span> <a class="paper-url" href="https://arxiv.org/pdf/2311.15529">PDF</a>
-                            <a class="paper-url" href="https://github.com/vimar-gu/MinimaxDiffusion">Code</a></span>
-                            <span class="paper-title">Efficient Dataset Distillation via Minimax Diffusion</span></p>
+                            <p class="card-title alignable"><span class="paper-title">Efficient Dataset Distillation via Minimax Diffusion</span></p>
                             <p class="paper-description">Efficiently distill ImageNet and generate representative and diverse images, yielding state-of-the-art validation performance.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Saeed Vahidian, Vyacheslav Kungurtsev, Haonan Wang, Wei Jiang, Yang You and Yiran Chen.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">CVPR 2024</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2311.15529">PDF</a>
+                            <a class="paper-url" href="https://github.com/vimar-gu/MinimaxDiffusion">Code</a></span>
                         </div>
                     </div>
                     <hr>
@@ -260,11 +277,13 @@
                             <img class="card-picture alignable" src="./imgs/pubs/ssd.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">AAAI 2024</span> <a class="paper-url" href="https://arxiv.org/pdf/2305.16645">PDF</a>
-                            <a class="paper-url" href="https://github.com/vimar-gu/SSD">Code</a></span>
-                            <span class="paper-title">Summarizing Stream Data for Memory-Restricted Online Continual Learning</span></p>
+                            <p class="card-title alignable"><span class="paper-title">Summarizing Stream Data for Memory-Restricted Online Continual Learning</span></p>
                             <p class="paper-description">Summarize the information flow in online continual learning into informative samples and significantly improve the replay effects under tight memory.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Kai Wang, Wei Jiang, and Yang You.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">AAAI 2024</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2305.16645">PDF</a>
+                            <a class="paper-url" href="https://github.com/vimar-gu/SSD">Code</a></span>
                         </div>
                     </div>
                     <hr>
@@ -273,51 +292,64 @@
                             <img class="card-picture alignable" src="./imgs/pubs/dream.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">ICCV 2023</span> <a class="paper-url" href="https://arxiv.org/pdf/2302.14416">PDF</a>
-                            <a class="paper-url" href="https://github.com/lyq312318224/DREAM">Code</a></span>
-                            <span class="paper-title">DREAM: Efficient Dataset Distillation by Representative Matching</span></p>
+                            <p class="card-title alignable"><span class="paper-title">DREAM: Efficient Dataset Distillation by Representative Matching</span></p>
                             <p class="paper-description">Improve the training efficiency by only calculating matching metrics with representative samples.</p>
                             <p class="paper-content">Yanqing Liu*, <b><u>Jianyang Gu*</u></b>, Kai Wang, Zheng Zhu, Wei Jiang, and Yang You.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">ICCV 2023</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2302.14416">PDF</a>
+                            <a class="paper-url" href="https://github.com/lyq312318224/DREAM">Code</a></span>
                         </div>
                     </div>
                     <hr>
-                    <ul>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">ICML 2025</span> <a class="paper-url" href="https://arxiv.org/pdf/2505.18399">PDF</a>
-                            <a class="paper-url" href="https://github.com/lin-zhao-resoLve/D3HR">Code</a></span>
-                            <span class="paper-title">Taming Diffusion for Dataset Distillation with High Representativeness.</span></p>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">Taming Diffusion for Dataset Distillation with High Representativeness.</span></p>
                             <p class="paper-content">Lin Zhao, Yushu Wu, Xinru Jiang, <b><u>Jianyang Gu</u></b>, Yanzhi Wang, Xiaolin Xu, Pu Zhao, and Xue Lin.</p>
-                        </li>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">ICLR 2025</span> <a class="paper-url" href="https://arxiv.org/pdf/2402.04676.pdf">PDF</a>
-                            <a class="paper-url" href="https://github.com/Mming11/RobustDatasetDistillation">Code</a></span>
-                            <span class="paper-title">Group Distributionally Robust Dataset Distillation with Risk Minimization.</span></p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">ICML 2025</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2505.18399">PDF</a>
+                            <a class="paper-url" href="https://github.com/lin-zhao-resoLve/D3HR">Code</a></span>
+                        </div>
+                    <hr>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">Group Distributionally Robust Dataset Distillation with Risk Minimization.</span></p>
                             <p class="paper-content">Saeed Vahidian*, Mingyu Wang*, <b><u>Jianyang Gu*</u></b>, Vyacheslav Kungurtsev, Wei Jiang and Yiran Chen.</p>
-                        </li>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge oral">ICLR 2024 Oral</span> <a class="paper-url" href="https://arxiv.org/pdf/2303.04947">PDF</a>
-                            <a class="paper-url" href="https://github.com/NUS-HPC-AI-Lab/InfoBatch">Code</a></span>
-                            <span class="paper-title">InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning.</span></p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">ICLR 2025</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2402.04676.pdf">PDF</a>
+                            <a class="paper-url" href="https://github.com/Mming11/RobustDatasetDistillation">Code</a></span>
+                        </div>
+                    <hr>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">InfoBatch: Lossless Training Speed Up by Unbiased Dynamic Data Pruning.</span></p>
                             <p class="paper-content">Ziheng Qin*, Kai Wang*, Zangwei Zheng, <b><u>Jianyang Gu</u></b>, Xiangyu Peng, Zhaopan Xu, Daquan Zhou, Lei Shang, Baigui Sun, Xuansong Xie, Yang You.</p>
-                        </li>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">ICCV 2023</span> <a class="paper-url" href="https://arxiv.org/abs/2308.10524">PDF</a>
-                            <a class="paper-url" href="https://github.com/magic-research/Dataset_Quantization">Code</a></span>
-                            <span class="paper-title">Dataset Quantization.</span></p>
+                            
+                            <span class="paper-meta"><span class="paper-badge oral">ICLR 2024 Oral</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2303.04947">PDF</a>
+                            <a class="paper-url" href="https://github.com/NUS-HPC-AI-Lab/InfoBatch">Code</a></span>
+                        </div>
+                    <hr>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">Dataset Quantization.</span></p>
                             <p class="paper-content">Daquan Zhou*, Kai Wang*, <b><u>Jianyang Gu*</u></b>, Dongze Lian, Xiangyu Peng, Yifan Zhang, Yang You, and Jiashi Feng.</p>
-                        </li>
-                    </ul>
+                            
+                            <span class="paper-meta"><span class="paper-badge">ICCV 2023</span>
+                             <a class="paper-url" href="https://arxiv.org/abs/2308.10524">PDF</a>
+                            <a class="paper-url" href="https://github.com/magic-research/Dataset_Quantization">Code</a></span>
+                        </div>
                     <div class='year-block'>Unsupervised Object Re-identification System</div>
                     <div class="card">
                         <div class="card-frame frame-pull-left">
                             <img class="card-picture alignable" src="./imgs/pubs/colorprompt.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">arXiv</span> <a class="paper-url" href="https://arxiv.org/abs/2308.10716">PDF</a>
-                            <a class="paper-url" href="https://github.com/vimar-gu/ColorPromptReID">Code</a></span>
-                            <span class="paper-title">Color Prompting for Data-Free Continual Unsupervised Domain Adaptive Person Re-Identification</span></p>
+                            <p class="card-title alignable"><span class="paper-title">Color Prompting for Data-Free Continual Unsupervised Domain Adaptive Person Re-Identification</span></p>
                             <p class="paper-description">Learn the task-conditioned color distribution to reduce forgetting and enhance generalization without storing previous images.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Hao Luo, Kai Wang, Wei Jiang, Yang You, and Jian Zhao.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">arXiv</span>
+                             <a class="paper-url" href="https://arxiv.org/abs/2308.10716">PDF</a>
+                            <a class="paper-url" href="https://github.com/vimar-gu/ColorPromptReID">Code</a></span>
                         </div>
                     </div>
                     <hr>
@@ -326,11 +358,13 @@
                             <img class="card-picture alignable" src="./imgs/pubs/msinet.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">CVPR 2023</span> <a class="paper-url" href="https://arxiv.org/pdf/2303.07065">PDF</a>
-                            <a class="paper-url" href="https://github.com/vimar-gu/MSINet">Code</a></span>
-                            <span class="paper-title">MSINet: Twins Contrastive Search of Multi-Scale Interaction for Object ReID</span></p>
+                            <p class="card-title alignable"><span class="paper-title">MSINet: Twins Contrastive Search of Multi-Scale Interaction for Object ReID</span></p>
                             <p class="paper-description">Search the optimal interaction between multi-scale branches and yield better supervised and unsupervised performance with limited parameter size.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Kai Wang, Hao Luo, Chen Chen, Wei Jiang, Yuqiang Fang, Shanghang Zhang, Yang You, and Jian Zhao.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">CVPR 2023</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2303.07065">PDF</a>
+                            <a class="paper-url" href="https://github.com/vimar-gu/MSINet">Code</a></span>
                         </div>
                     </div>
                     <hr>
@@ -339,30 +373,38 @@
                             <img class="card-picture alignable" src="./imgs/pubs/met.png" />
                         </div>
                         <div class="card-content pull-left">
-                            <p class="card-title alignable"><span class="paper-meta"><span class="paper-badge">IEEE TIFS</span> <a class="paper-url" href="https://ieeexplore.ieee.org/abstract/document/9672094/">PDF</a></span>
-                            <span class="paper-title">Multi-View Evolutionary Training for Unsupervised Domain Adaptive Person Re-Identification</span></p>
+                            <p class="card-title alignable"><span class="paper-title">Multi-View Evolutionary Training for Unsupervised Domain Adaptive Person Re-Identification</span></p>
                             <p class="paper-description">Effectively reduce the clustering noise from the dimensions of snapshot quality and temporal consistency in unsupervised domain adaptation.</p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Weihua Chen, Hao Luo, Fan Wang, Hao Li, Wei Jiang, and Weijie Mao.</p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">IEEE TIFS</span>
+                             <a class="paper-url" href="https://ieeexplore.ieee.org/abstract/document/9672094/">PDF</a></span>
                         </div>
                     </div>
                     <hr>
-                    <ul>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">IEEE TITS</span> <a class="paper-url" href="https://ieeexplore.ieee.org/abstract/document/9967437">PDF</a></span>
-                            <span class="paper-title">Transformer-Based Domain-Specific Representation for Unsupervised Domain Adaptive Vehicle Re-Identification.</span></p>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">Transformer-Based Domain-Specific Representation for Unsupervised Domain Adaptive Vehicle Re-Identification.</span></p>
                             <p class="paper-content">Ran Wei, <b><u>Jianyang Gu</u></b>, Shuting He, and Wei Jiang.</p>
-                        </li>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">Pattern Anal Applic</span> <a class="paper-url" href="https://link.springer.com/article/10.1007/s10044-020-00900-w">PDF</a></span>
-                            <span class="paper-title">An efficient global representation constrained by Angular Triplet loss for vehicle re-identification.</span></p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">IEEE TITS</span>
+                             <a class="paper-url" href="https://ieeexplore.ieee.org/abstract/document/9967437">PDF</a></span>
+                        </div>
+                    <hr>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">An efficient global representation constrained by Angular Triplet loss for vehicle re-identification.</span></p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Wei Jiang, Hao Luo, and Hongyan Yu.</p>
-                        </li>
-                        <li>
-                            <p class="paper-head"><span class="paper-meta"><span class="paper-badge">ECCVW 2020</span> <a class="paper-url" href="https://arxiv.org/pdf/2012.13498">PDF</a> <a class="paper-url" href="https://github.com/vimar-gu/Bias-Eliminate-DA-ReID">Code</a></span>
-                            <span class="paper-title">1st Place Solution to VisDA-2020: Bias Elimination for Domain Adaptive Pedestrian Re-identification.</span></p>
+                            
+                            <span class="paper-meta"><span class="paper-badge">Pattern Anal Applic</span>
+                             <a class="paper-url" href="https://link.springer.com/article/10.1007/s10044-020-00900-w">PDF</a></span>
+                        </div>
+                    <hr>
+                        <div class="card">
+                            <p class="paper-head"><span class="paper-title">1st Place Solution to VisDA-2020: Bias Elimination for Domain Adaptive Pedestrian Re-identification.</span></p>
                             <p class="paper-content"><b><u>Jianyang Gu</u></b>, Hao Luo, Weihua Chen, Yiqi Jiang, Yuqi Zhang, Shuting He, Fan Wang, Hao Li, and Wei Jiang.</p>
-                        </li>
-                    </ul>
+                            
+                            <span class="paper-meta"><span class="paper-badge">ECCVW 2020</span>
+                             <a class="paper-url" href="https://arxiv.org/pdf/2012.13498">PDF</a> <a class="paper-url" href="https://github.com/vimar-gu/Bias-Eliminate-DA-ReID">Code</a></span>
+                        </div>
                 </div>
                 <div id="experiences">
                     <h2>Experience</h2>
