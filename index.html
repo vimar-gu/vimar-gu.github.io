@@ -10,6 +10,9 @@
     <!-- <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="./css/index-mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)">
     <link href="./css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1000px)">
 
@@ -59,33 +62,22 @@
         <div id="index-banner">
             <div id="index-banner-glass">
                 <div class="container navbar">
-                    <div class="navbar-frame frame-pull-left">
+                    <div class="navbar-frame">
                         <img class="profile-picture alignable pull-right" src="./imgs/photo.jpg" />
                     </div>
-                    <div class="navbar-content pull-left">
-                        <a id="author-name" class="alignable pull-left author-name" href="">Jianyang Gu</a>
-                        <br>
-                        <p class="pull-left"><b>Postdoc @ Ohio State University</b></p>
-                        <br>
-                        <a class="pull-left">Dept. of Computer Science and Engineering</a>
-                        <br>
-                        <p class="pull-left">Email: gu.1220[at]osu.edu</p>
+                    <div class="navbar-content">
+                        <a id="author-name" class="author-name" href="">Jianyang Gu</a>
+                        <div class="hero-role">Postdoc @ Ohio State University</div>
+                        <div class="hero-meta">Dept. of Computer Science and Engineering</div>
+                        <div class="hero-meta">Email: gu.1220[at]osu.edu</div>
+                        <ul id="navlist" class="navbar-ul hero-actions">
+                             <li class="nav-list"><a href="./vitae.pdf">CV</a></li>
+                             <li class="nav-list"><a href="https://scholar.google.com/citations?user=8ZXbT18AAAAJ&hl=en">Scholar</a></li>
+                             <li class="nav-list"><a href="https://github.com/vimar-gu">GitHub</a></li>
+                             <li class="nav-list"><a href="mailto:gu.1220@osu.edu">Email</a></li>
+                        </ul>
                     </div>
                 </div>
-
-                <ul id="navlist" class="navbar-ul">
-                     <li class="alignable nav-list"><a href="mailto:gu.1220@osu.edu">Mail</a>
-                     /
-                     </li>
-                     <li class="alignable nav-list"><a href="https://github.com/vimar-gu">Github</a>
-                     /
-                     </li>
-                     <li class="alignable nav-list"><a href="https://scholar.google.com/citations?user=8ZXbT18AAAAJ&hl=en">Google Scholar</a>
-                     /
-                     </li>
-                     <li class="alignable nav-list"><a href="./vitae.pdf">Vitae</a>
-                     </li>
-                </ul>
             </div>
         </div>
 
@@ -438,7 +430,7 @@
 
         <div id="tail">
             <div id="tail-glass">
-                Written by Jianyang Gu
+                Written by Jianyang Gu & CodeX
             </div>
         </div>
     </div>
