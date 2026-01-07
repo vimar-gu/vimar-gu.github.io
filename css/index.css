@@ -71,7 +71,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px sol
 /*#projects{width: 100%}*/
 .card{border-radius: 25px; padding:0; display: inline-block}
 .card-frame{width:28%; text-align: center; margin: 2% 0% 2% 1%;}
-.card-content{margin-left: 2%; width: 65%}
+.card-content{margin-left: 2%; margin-top: 1.5%; width: 65%}
 /* .card:hover{box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.1); background-color: #e9e9e9} */
 .card-picture{max-width: 95%; border-radius: 15px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);}
 .card-title{margin: 0 0 0 0; font-weight: bold; display: inline-block;}
