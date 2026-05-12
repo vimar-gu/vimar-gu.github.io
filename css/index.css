@@ -67,6 +67,21 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px sol
 .content{width: 94%; margin: auto; margin-top: 50px;}
 .main{margin-left: 20px; margin-right: 20px}
 
+#news{
+    margin-top: 28px;
+}
+
+#news .news-list{
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 16px;
+    margin: 0;
+}
+
+#news .news-list li{
+    margin-bottom: 2px;
+}
+
 
 /*#projects{width: 100%}*/
 .card{border-radius: 25px; padding:0; display: inline-block}
