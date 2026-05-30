@@ -15,7 +15,7 @@ a:hover{text-decoration:underline}
 
 hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(255,255,255,0.4)}
 
-.wrapper{border-radius: 45px;min-height:99%;width:90%;margin:25% auto 0;padding-top:32px;
+.wrapper{border-radius: 45px;min-height:99%;width:90%;margin:25% auto 32px;padding-top:32px;padding-bottom:32px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22);
     background-color: #fafafa;}
 
@@ -145,7 +145,7 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px sol
 
 .visitor{display: none;}
 
-#tail{background-position: center center;width: 85%; margin: 70px 0; left:50%; transform:translate(-50%, -50%);position: relative;z-index:2}
+#tail{background-position: center center;width: 85%; margin: 44px 0 0; left:50%; transform:translateX(-50%);position: relative;z-index:2}
 #tail-glass{border-radius: 25px;padding: 20px 0 20px 0; background-color: #eeeeee;text-align: center;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
