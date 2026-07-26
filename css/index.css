@@ -32,11 +32,11 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px sol
 .navbar .frame-pull-left,.navbar .pull-left{float:none}
 .navbar .pull-right{float:none}
 
-#author-name{font-size:36px;color:#272727;display:block;font-weight: bold;}
-.hero-role{font-size:18px;font-weight:600;margin-top:12px}
+#author-name{font-size:36px;color:#272727;display:block;font-weight: bold;margin-bottom:8px; margin-top: 8px}
+.hero-role{font-size:18px;font-weight:600;margin-top:4px}
 .hero-meta{color:#555;margin-top:4px}
 .hero-actions{margin-top:16px;padding:0}
-.hero-actions .nav-list{list-style-type:none;margin:0 8px 0 0;display:inline-block}
+.hero-actions .nav-list{list-style-type:none;margin:0 0 0 0;display:inline-block}
 .hero-actions a{display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid #d8d8d8;background-color:#ffffff;color:#272727;font-size:14px}
 .hero-actions a:hover{background-color:#f2f2f2;text-decoration:none}
 

@@ -31,8 +31,8 @@ hr{border:0;height:0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px sol
 .navbar-frame{height:160px;width:190px;margin:5px}
 .navbar-content{height:auto;margin-left:0}
 
-#author-name{font-size:30px;color:#272727;display:block;font-weight: bold}
-.hero-role{font-size:16px;font-weight:600;margin-top:12px}
+#author-name{font-size:30px;color:#272727;display:block;font-weight: bold; margin-bottom:8px; margin-top: 8px}
+.hero-role{font-size:16px;font-weight:600;margin-top:4px}
 .hero-meta{color:#555;margin-top:4px}
 .hero-actions{margin-top:14px;padding:0}
 .hero-actions .nav-list{list-style-type:none;margin:0 6px 8px 0;display:inline-block}
